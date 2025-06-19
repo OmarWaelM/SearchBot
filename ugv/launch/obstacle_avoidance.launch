@@ -1,0 +1,7 @@
+<launch>
+	<node pkg="ugv" type="MQTT_bridge.py" name="MQTT_Bridge" output="screen"/>
+	<node pkg="ugv" type="trajectory_plotting.py" name="Plotting_Node" output="screen"/>
+	<node pkg="ugv" type="YOLO.py" name="YOLO_Node" output="screen"/>
+	<node pkg="ugv" type="velocity_selecto_avoidance.py" name="Velocity_Publisher_Node" output="screen"/>
+	<node pkg="ugv" type="local_planner.py" name="Planner_Node" output="screen"/>
+</launch>

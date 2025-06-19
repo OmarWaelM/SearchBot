@@ -1,0 +1,30 @@
+DWAPlannerROS:
+
+  # Robot configuration parameters
+  max_vel_x: 0.8      # Maximum linear velocity [m/s]
+  min_vel_x: 0.05        # Minimum linear velocity
+
+  max_vel_theta: 6.0     # Maximum angular velocity [rad/s]
+  min_vel_theta: -6.0
+
+  acc_lim_x: 0.5         # Maximum linear acceleration [m/s^2]
+  acc_lim_theta: 1.0     # Maximum angular acceleration [rad/s^2]
+  acc_lim_y: 0.0         # Not used unless holonomic
+
+  holonomic_robot: false
+
+  # Goal Tolerances
+  yaw_goal_tolerance: 0.1
+  xy_goal_tolerance: 0.2
+  latch_xy_goal_tolerance: true
+
+  # Forward simulation
+  sim_time: 2.0          # Time horizon for simulating trajectories [s]
+  sim_granularity: 0.025 # Granularity of simulated trajectory [m]
+
+  vx_samples: 20         # Number of samples for linear velocity
+  vtheta_samples: 40     # Number of samples for angular velocity
+
+  # Cost function weights
+  path_distance_bias: 32.0    # Weight for following the global path
+  goal_distance_bias: 24.0    # Weight for getting cl

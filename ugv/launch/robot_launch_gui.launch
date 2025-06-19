@@ -1,0 +1,7 @@
+<launch>
+	<node pkg="ugv" type="ipcam_publisher.py" name="Camera_Node" output="screen"/>
+	<node pkg="ugv" type="main_gui.py" name="GUI_Node" output="screen"/>
+	<node pkg="ugv" type="velocity_publisher_gui.py" name="Velocity_Publisher_Node" output="screen"/>
+	<node pkg="ugv" type="MQTT_bridge.py" name="MQTT_Bridge" output="screen"/>
+	<node pkg="ugv" type="trajectory_plotting.py" name="Plotting_Node" output="screen"/>
+</launch>

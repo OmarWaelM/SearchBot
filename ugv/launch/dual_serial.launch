@@ -1,0 +1,12 @@
+<launch>
+  <!-- Arduino on /dev/ttyACM0 -->
+  <node name="arduino_serial" pkg="rosserial_python" type="serial_node.py" output="screen">
+    <param name="port" value="/dev/ttyACM0"/>
+    <param name="baud" value="57600"/>
+  </node>
+
+ <!-- Start rosserial_server to listen for ESP32 over WiFi -->
+  <node name="esp32_serial" pkg="rosserial_server" type="socket_node" output="screen">
+    <param name="port" value="11411"/>
+  </node>
+</launch>
