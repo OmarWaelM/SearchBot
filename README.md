@@ -30,3 +30,22 @@ A 4-wheel differential drive unmanned ground vehicle (UGV) developed using **ROS
 ```bash
 git clone https://github.com/your-username/stalker-ugv.git
 cd stalker-ugv
+```
+### 2. Setup ROS Workspace
+```bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+catkin_init_workspace
+cp -r ~/stalker-ugv/* .
+cd ..
+catkin_make
+source devel/setup.bash
+```
+### 3. Install Dependencies
+```bash
+sudo apt-get update
+sudo apt-get install ros-<your-ros-distro>-slam-gmapping ros-<your-ros-distro>-joy
+pip install opencv-python numpy pyttsx3 SpeechRecognition
+```
+## Usage
+
