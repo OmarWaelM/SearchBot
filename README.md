@@ -36,16 +36,10 @@ cd stalker-ugv
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
-cp -r ~/stalker-ugv/* .
+cp -r ~/SearchBot/* .
 cd ..
 catkin_make
 source devel/setup.bash
-```
-### 3. Install Dependencies
-```bash
-sudo apt-get update
-sudo apt-get install ros-<your-ros-distro>-slam-gmapping ros-<your-ros-distro>-joy
-pip install opencv-python numpy pyttsx3 SpeechRecognition
 ```
 ## Usage
 
